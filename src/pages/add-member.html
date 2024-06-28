@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Cafe | Add Member</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navbar -->
+      <header class="navbar bg-base-100 container mx-auto">
+        <!-- Logo -->
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">MyCafe</a>
+        </div>
+
+        <!-- Nav -->
+        <nav class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+            <li><a href="/">Home</a></li>
+            <li><a href="all-coffee-page.html">All Coffee</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li>
+              <details>
+                <summary>Parent</summary>
+                <ul class="bg-base-100 rounded-t-none p-2 z-10">
+                  <li><a>Link 1</a></li>
+                  <li><a>Link 2</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+       <div class="w-40 h-40 bg-white">
+        <h1>Hello world!</h1>
+       </div>
+
+      <!-- Footer -->
+      <footer class="footer bg-base-200 text-base-content p-10">
+        <nav>
+          <h6 class="footer-title">Services</h6>
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+          <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Legal</h6>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        </nav>
+        <form>
+          <h6 class="footer-title">Newsletter</h6>
+          <fieldset class="form-control w-80">
+            <label class="label">
+              <span class="label-text">Enter your email address</span>
+            </label>
+            <div class="join">
+              <input
+                type="text"
+                placeholder="username@site.com"
+                class="input input-bordered join-item" />
+              <button class="btn btn-primary join-item">Subscribe</button>
+            </div>
+          </fieldset>
+        </form>
+      </footer>
+    </div>
+    <script type="module" src="../../main.js"></script>
+  </body>
+</html>
