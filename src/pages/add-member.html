@@ -34,10 +34,35 @@
         </nav>
       </header>
 
-      <!-- Main -->
-       <div class="w-40 h-40 bg-white">
-        <h1>Hello world!</h1>
-       </div>
+      <!-- Form -->
+      <form action="" class="flex max-w-sm mx-auto flex-col gap-5 my-8 bg-base-300 p-7">
+        <h1 class="text-3xl text-center font-bold">Add Member</h1>
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">Email</span>
+          </div>
+          <input
+            id="name"
+            type="text"
+            placeholder="Enter username"
+            class="input input-bordered w-full max-w-xs"
+            required />
+        </label>
+
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">Job Title</span>
+          </div>
+          <input
+            id="job"
+            type="text"
+            placeholder="Enter user's job role"
+            class="input input-bordered w-full max-w-xs"
+            required />
+        </label>
+
+        <button id="submit" class="btn btn-ghost btn-active max-w-xs">Add member</button>
+      </form>
 
       <!-- Footer -->
       <footer class="footer bg-base-200 text-base-content p-10">
@@ -79,5 +104,6 @@
       </footer>
     </div>
     <script type="module" src="../../main.js"></script>
+    <script src="../js/add-member.js"></script>
   </body>
 </html>

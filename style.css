@@ -5,6 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+   .featured-card {
+      @apply card bg-base-300 p-2 w-80 max-w-[400px] shadow-xl carousel-item
+   }
+
+   .favouraite-card {
+      @apply card bg-base-100 image-full w-full max-w-[400px] shadow-xl
+   }
+}
+
 html {
    scroll-behavior: smooth;
 }
@@ -13,6 +23,8 @@ body {
    font-family: "Roboto", sans-serif;
 }
 
-h1,h2,h3 {
-   font-family: "Roboto Slab",sans-serif;
+h1,
+h2,
+h3 {
+   font-family: "Roboto Slab", sans-serif;
 }
