@@ -9,31 +9,23 @@
   <body>
     <div id="app">
       <!-- Navbar -->
-      <header class="navbar bg-base-100 container mx-auto">
-        <!-- Logo -->
-        <div class="flex-1">
-          <a class="btn btn-ghost text-xl">MyCafe</a>
-        </div>
+      <section class="bg-base-200 mb-5">
+        <header class="navbar container mx-auto">
+          <!-- Logo -->
+          <div class="flex-1">
+            <a class="btn btn-ghost text-xl">MyCafe</a>
+          </div>
 
-        <!-- Nav -->
-        <nav class="flex-none">
-          <ul class="menu menu-horizontal px-1">
-            <li><a href="/">Home</a></li>
-            <li><a href="./src/pages/all-coffee-page.html">All Coffee</a></li>
-            <li><a href="./src/pages/members.html">Members</a></li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul class="bg-base-100 rounded-t-none p-2 z-10">
-                  <li><a>Link 1</a></li>
-                  <li><a>Link 2</a></li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+          <!-- Nav -->
+          <nav class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+              <li><a href="/">Home</a></li>
+              <li><a href="./src/pages/all-coffee-page.html">All Coffee</a></li>
+              <li><a href="./src/pages/members.html">Members</a></li>
+            </ul>
+          </nav>
+        </header>
+      </section>
       <!-- Hero section -->
       <section class="mb-12">
         <!-- Hero Container -->
@@ -64,84 +56,18 @@
           <!-- card container -->
           <div
             id="featured-container"
-            class="carousel carousel-center bg-neutral rounded-box space-x-4 p-4 container mx-auto">
-          </div>
+            class="carousel carousel-center bg-neutral rounded-box space-x-4 p-4 container mx-auto"></div>
         </div>
       </section>
 
       <!-- Pick Fav Coffee -->
       <section class="mb-14">
         <div class="container mx-auto">
-          <h1 class="text-3xl font-bold text-center mb-5">
-            Best Coffee
-          </h1>
+          <h1 class="text-3xl font-bold text-center mb-5">Best Coffee</h1>
           <!-- card container -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center place-content-center gap-5">
-            <!-- coffee card -->
-            <article
-              class="card bg-base-100 image-full w-full max-w-[400px] shadow-xl">
-              <figure>
-                <img
-                  src="https://images.unsplash.com/photo-1599398054066-846f28917f38?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="coffee" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title">Caramel Latte</h2>
-                <p>
-                  Om du gillar latte med en speciell smak kan karamell latte
-                  vara det bästa alternativet för att ge dig en upplevelse av
-                  den naturliga sötman och krämigheten hos ångad mjölk och
-                  karamell.
-                </p>
-                <div class="card-actions justify-end">
-                  <button class="btn btn-primary">Buy Now</button>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="card bg-base-100 image-full w-full max-w-[400px] shadow-xl">
-              <figure>
-                <img
-                  src="https://images.unsplash.com/photo-1599398054066-846f28917f38?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="coffee" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title">Caramel Latte</h2>
-                <p>
-                  Om du gillar latte med en speciell smak kan karamell latte
-                  vara det bästa alternativet för att ge dig en upplevelse av
-                  den naturliga sötman och krämigheten hos ångad mjölk och
-                  karamell.
-                </p>
-                <div class="card-actions justify-end">
-                  <button class="btn btn-primary">Buy Now</button>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="card bg-base-100 image-full w-full max-w-[400px] shadow-xl">
-              <figure>
-                <img
-                  src="https://images.unsplash.com/photo-1599398054066-846f28917f38?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="coffee" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title">Caramel Latte</h2>
-                <p>
-                  Om du gillar latte med en speciell smak kan karamell latte
-                  vara det bästa alternativet för att ge dig en upplevelse av
-                  den naturliga sötman och krämigheten hos ångad mjölk och
-                  karamell.
-                </p>
-                <div class="card-actions justify-end">
-                  <button class="btn btn-primary">Buy Now</button>
-                </div>
-              </div>
-            </article>
-          </div>
+            id="fav-container"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center place-content-center gap-5"></div>
         </div>
         <div class="flex justify-center mt-3">
           <a

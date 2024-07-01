@@ -1,5 +1,6 @@
 const featuredContainer = document.querySelector("#featured-container");
-console.log(featuredContainer);
+const favContainer = document.querySelector("#fav-container");
+console.log(favContainer);
 
 let coffees = [];
 
@@ -9,22 +10,25 @@ window.addEventListener("DOMContentLoaded", () => {
   <div class="skeleton h-4 w-28"></div>
   <div class="skeleton h-4 w-full"></div>
   <div class="skeleton h-4 w-full"></div>
-</div>`
-  getHotCoffees();
+</div>`;
+  getHotCoffees(5, 3);
 });
 
 // get data from api
-async function getHotCoffees() {
+async function getHotCoffees(sliceCount, sliceCount2) {
   const res = await fetch("https://api.sampleapis.com/coffee/hot");
   const data = await res.json();
-  featuredContainer.innerHTML = ''
+  featuredContainer.innerHTML = "";
   coffees = data;
-  coffees.slice(0,5).forEach((coffee) => {
-    addCard(coffee);
+  coffees.slice(0, sliceCount).forEach((coffee) => {
+    addCard(coffee,featuredContainer);
   });
-  console.table(coffees);
+  coffees.reverse().slice(0, sliceCount2).forEach((coffee) => {
+    addCard(coffee,favContainer);
+  });
 }
-async function addCard(item) {
+
+async function addCard(item, cardContaier) {
   let articleElement = document.createElement("article");
   articleElement.classList.add("featured-card");
   articleElement.innerHTML = `
@@ -38,11 +42,12 @@ async function addCard(item) {
                  <div class="card-body">
                    <h2 class="card-title">
                      ${item.title}
-                     <div class="badge badge-secondary">NEW</div>
+                     ${cardContaier == featuredContainer? '<div class="badge badge-secondary">NEW</div>': ''}       
                    </h2>
                    <p class="overflow-hidden text-ellipsis text-nowrap">
                      ${item.description}
                    </p>
+                   
                    <div class="card-actions justify-start">
                      <div class="badge badge-outline">${item.ingredients[0]}</div>
                    </div>
@@ -59,5 +64,5 @@ async function addCard(item) {
                     <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                   </div>
                  </div>`;
-  featuredContainer.appendChild(articleElement);
+  cardContaier.appendChild(articleElement);
 }
